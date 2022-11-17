@@ -3,4 +3,4 @@ def test_assert_truth():
 
 
 def test_1_and_1_equals_3():
-    assert True
+    assert 1 + 1 == 3
