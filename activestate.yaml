@@ -9,7 +9,10 @@ scripts:
     language: python3
     value: |
       # -*- coding: utf-8 -*-
-      subprocess.run(["git", "config", "core.hooksPath", "extras/githooks"])
+
+      if subprocess.run(["git", "config", "core.hooksPath"], capture_output=True) == '':
+        print("Configuring Git to keep depedencies in sync.")
+        subprocess.run(["git", "config", "core.hooksPath", "extras/githooks"])
 
 events:
   # This is the ACTIVATE event, it will run whenever a new virtual environment is created (eg. by running `state activate`)
