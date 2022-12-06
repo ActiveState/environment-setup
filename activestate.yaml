@@ -1,4 +1,4 @@
-project: https://platform.activestate.com/scottr/onboarding?branch=main&commitID=29533251-e3bf-407f-85f7-2547678803e6
+project: https://platform.activestate.com/scottr/onboarding?branch=python3.9&commitID=7987aeac-2f8d-4d1d-bd8f-87e7f884bcc4
 
 scripts:
   - name: testit
