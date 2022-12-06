@@ -4,7 +4,7 @@ scripts:
   - name: testit
     language: bash
     value: |
-      pytest -v test.py
+      pytest -v test_me.py
   - name: activationMessage
     language: python3
     value: |
