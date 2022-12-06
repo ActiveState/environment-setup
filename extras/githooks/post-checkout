@@ -21,6 +21,3 @@ function update_platform() {
 if [ "$3" == "1" ]; then
     update_platform
 fi
-if [ "$1" == "$2" ]; then
-      echo "New branch created. (Probably)."
-fi
