@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Ensure you're running the proper runtime when you switch branches
+
+function update_platform() {
+    echo "Updating dependencies to match requirements of commit (add .bin/ to the start of your PATH for this to work)"
+
+    state exec exit 0
+    #JSON_OUTPUT=$(state activate --output=json | tr -d '\0')
+    #HAS_ERROR=$( echo "$JSON_OUTPUT" | jq -r .Error )
+
+    if [ "$HAS_ERROR" = "null" ];
+    then
+        NEW_PATH=$( echo "$JSON_OUTPUT" | jq -r .PATH )
+        ln -sf "$NEW_PATH" ".bin"
+    else
+        echo "Could not run 'state activate'; consult error message"
+    fi
+}
+
+if [ "$3" == "1" ]; then
+    update_platform
+fi
+if [ "$1" == "$2" ]; then
+      echo "New branch created. (Probably)."
+fi
