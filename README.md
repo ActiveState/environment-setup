@@ -1,7 +1,6 @@
-# Demonstrating keeping your depdencies in sync
+# Managing your team depedencies
 
-Ever try diving into someone elses software development project and get frustrated about what it takes to setup a development
-enviroment? Often the instructions are vague, don't cover your specific setup, are out of date or  are completely missing!
+Ever try diving into someone elses software development project and get frustrated about what it takes to setup a development enviroment? Often the instructions are vague, don't cover your specific setup, are out of date or completely missing!
    
 
 This simple project demonstrates how you can streamline setting up development environments for members of your team.
@@ -23,17 +22,15 @@ To try this simply run the appropriate shell command based on your operating sys
 
 It will: 
 * Install the *state tool*, our package manager for teams, if it not already present on the machine.
-* Checkout this git repository
+* Checkout this git repository (Git not required!)
 * Configure git hooks
 * Install your needed depdencies
 
 
 ###  Linux and Mac, run this command 
 
-```
-apt-get update && apt-get install --yes ssh-client curl git build-essential libffi-dev libgmp-dev libtinfo5 libtinfo-dev file 
-```
-
+Assuming you have curl installed on your machine this single command is all you need
+to get setup to code:
 
 ```bash
 $ sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.sh) -c'state activate --default ActiveState/onboarding'
@@ -77,9 +74,5 @@ just checkout the github branch and run `testit` again.
 ![Running your unit tests](docs/imgs/last-part-linux.gif)
 
 That's it! Thanks to the git hook and state tool, whenever you change branches or pull in new commits from a remote repo we ensure all your dedpdencies are up to date. And we mean, ALL YOUR DEPEDENCIES, which  includes compliers, interpteres, c-libraries and other devtools are up to date.
-
-
-
-
 
 
