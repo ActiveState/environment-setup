@@ -40,7 +40,7 @@ $ sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli
 ```
 
 
-![Installing Linux](docs/imgs/onboarding-linux.gif)
+![Setting up your environment with a single command](docs/imgs/onboarding-linux.gif)
 
 ### Windows users, run this command
 
@@ -57,27 +57,9 @@ c:\> powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).D
 
 ## Running the unit tests 
 
-Once installations is finished, you can run the unit tests.. we've set up a simple entrypoint in the activestate.yaml called  `testit`
-that invokes pytest for you.
+Once installations is finished, you can run the unit tests.. we've set up a simple entrypoint in the activestate.yaml called  `testit` that invokes pytest for you.
 
-```bash
-
-$ testit                
-Running Script: testit
-
-
-Script Output
-─────────────
-================================================================ test session starts =================================================================
-platform darwin -- Python 3.9.15, pytest-7.1.3, pluggy-1.0.0 -- /Users/srobertson/Library/Caches/activestate/6e54892e/usr/bin/python3
-cachedir: .pytest_cache
-rootdir: /private/tmp/onboarding
-collected 1 item
-
-test_me.py::test_python PASSED                                                                                                                 [100%]
-
-================================================================= 1 passed in 0.01s ==================================================================
-```
+![Running your unit tests](docs/imgs/testit-linux.gif)
 
 
 Note from the output, it's using Python 3.9.15.
@@ -87,31 +69,7 @@ Note from the output, it's using Python 3.9.15.
 Now, let's try the other branch which requires Python 3.10. It couldn't be eaiser
 just checkout the github branch and run `testit` again.
 
-```bash
-$ git checkout awesome-new-feature
-
-Switched to branch 'awesome-new-feature'
-Your branch is ahead of 'origin/awesome-new-feature' by 3 commits.
-  (use "git push" to publish your local commits)
-Updating dependencies to match requirements of commit (add .bin/ to the start of your PATH for this to work)
-Installing                                 22/22
-✔ All dependencies have been installed and verified.
-
-$ testit
-Running Script: testit
-
-
-Script Output
-─────────────
-================================================================ test session starts =================================================================
-platform darwin -- Python 3.10.8, pytest-7.1.3, pluggy-1.0.0 -- /Users/srobertson/Library/Caches/activestate/6e54892e/usr/bin/python3
-cachedir: .pytest_cache
-rootdir: /private/tmp/onboarding
-collected 1 item
-
-test_me.py::test_python PASSED
-
-```
+![Running your unit tests](docs/imgs/last-part-linux.gif)
 
 That's it! Thanks to the git hook and state tool, whenever you change branches or pull in new commits from a remote repo we ensure all your dedpdencies are up to date. And we mean, ALL YOUR DEPEDENCIES, which  includes compliers, interpteres, c-libraries and other devtools are up to date.
 
