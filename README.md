@@ -36,7 +36,7 @@ apt-get update && apt-get install --yes ssh-client curl git build-essential libf
 
 
 ```bash
-$ sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.sh) -c'state activate --default scottr/onboarding'
+$ sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.sh) -c'state activate --default ActiveState/onboarding'
 ```
 
 
@@ -46,14 +46,19 @@ $ sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli
 
 ```powershell
 
-c:\> powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).DownloadString('https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.ps1'))) -c'state activate --default scottr/onboarding'"
+c:\> powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).DownloadString('https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.ps1'))) -c'state activate --default ActiveState/onboarding'"
 
 ```
 
-### Users with state tool (our package manager for teams)
+### If state tool is already istalled
 
-`state activate scottr/onboarding`
+If you are the type that does not like to run random content through your shell process 
+OR you have already installed another project on your system then you can directly activate the virtual enviorment by typing the following command:
 
+`state activate ActiveState/onboarding`
+
+
+**TODO: Insert instructions or links to installing the state tool directly**
 
 ## Running the unit tests 
 
