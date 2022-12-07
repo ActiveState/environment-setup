@@ -30,9 +30,17 @@ It will:
 
 ###  Linux and Mac, run this command 
 
+```
+apt-get update && apt-get install --yes ssh-client curl git build-essential libffi-dev libgmp-dev libtinfo5 libtinfo-dev file 
+```
+
+
 ```bash
 $ sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.sh) -c'state activate --default scottr/onboarding'
 ```
+
+
+![Installing Linux](docs/imgs/onboarding-linux.gif)
 
 ### Windows users, run this command
 
