@@ -1,4 +1,4 @@
-project: https://platform.activestate.com/ActiveState/environment-setup?branch=main&commitID=59c5ab5e-70a8-4df0-a86c-aeffb6bee25f
+project: https://platform.activestate.com/ActiveState/environment-setup?branch=awesome-new-feature&commitID=e86dee1d-7a40-453b-b562-811e49bcc20e
 
 scripts:
   - name: testit
