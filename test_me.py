@@ -1,6 +1,6 @@
-def test_assert_truth():
-    assert True
+import sys
 
+def test_python():
+    py_info = sys.version_info
+    assert py_info.major == 3 and py_info.minor==9
 
-def test_1_and_1_equals_3():
-    assert 1 + 1 == 3
