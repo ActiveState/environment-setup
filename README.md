@@ -33,7 +33,7 @@ Assuming you have curl installed on your machine this single command is all you 
 to get setup to code:
 
 ```bash
-$ sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.sh) -c'state activate --default ActiveState/onboarding'
+sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.sh) -c'state activate --default ActiveState/onboarding'
 ```
 
 
@@ -43,7 +43,7 @@ $ sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli
 
 ```powershell
 
-c:\> powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).DownloadString('https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.ps1'))) -c'state activate --default ActiveState/onboarding'"
+powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).DownloadString('https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.ps1'))) -c'state activate --default ActiveState/onboarding'"
 
 ```
 
@@ -52,7 +52,9 @@ c:\> powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).D
 If you are the type that does not like to run random content through your shell process 
 OR you have already installed another project on your system then you can directly activate the virtual enviorment by typing the following command:
 
-`state activate ActiveState/onboarding`
+```bash
+state activate ActiveState/onboarding
+```
 
 
 **TODO: Insert instructions or links to installing the state tool directly**
