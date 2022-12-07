@@ -3,10 +3,8 @@
 # Ensure you're running the proper runtime when you switch branches
 
 function update_platform() {
-    echo "Updating dependencies to match requirements of commit (add .bin/ to the start of your PATH for this to work)"
-
+    echo "Updating dependencies to match requirements of the current commit."
     state exec exit 0
-
 }
 
 if [ "$3" == "1" ]; then
