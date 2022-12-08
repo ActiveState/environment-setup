@@ -48,7 +48,7 @@ sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01
 ```
 
 
-### powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).DownloadString('https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.ps1'))) -c'state activate --default ActiveState/onboarding'"
+powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).DownloadString('https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.ps1'))) -c'state activate --default ActiveState/onboarding'"
 ```
 
 
@@ -60,7 +60,7 @@ If you are the type that doesn’t like to run random content through your shell
 
 
 ```
-state activate ActiveState/environment-setup
+state activate ActiveState/onboarding
 
 ```
  See instructions for installing State Tool [independent of project activation](https://docs.activestate.com/platform/state/install/#installing-on-windows).
