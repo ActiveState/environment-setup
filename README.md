@@ -63,7 +63,7 @@ If you are the type that doesn’t like to run random content through your shell
 state activate ActiveState/onboarding
 
 ```
- See instructions for installing State Tool [independent of project activation](https://docs.activestate.com/platform/state/install/#installing-on-windows).
+ [See instructions](https://docs.activestate.com/platform/state/install/#installing-on-windows) for installing State Tool independent of project activation.
 
 
 ## Running the unit tests
