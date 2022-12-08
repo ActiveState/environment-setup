@@ -1,80 +1,89 @@
-# Managing your team depedencies
 
-Ever try diving into someone elses software development project and get frustrated about what it takes to setup a development enviroment? Often the instructions are vague, don't cover your specific setup, are out of date or completely missing!
-   
+# Managing your team dependencies
 
-This simple project demonstrates how you can streamline setting up development environments for members of your team.
+Have you ever tried diving into someone else's software development project and got frustrated about what it takes to set up a development environment? Often the instructions are vague, don't cover your specific setup, are out of date, or are completely missing!
 
-With the ActiveState platform, you can setup all the dependecies needed to run and develop your project regardless
-of operating system and reduce complicated development enivronment setup down to single command.
+This simple project demonstrates how you can streamline setting up development environments for your team members.
 
-In our hypothetical python project, we've setup a simple unit test that ensure's you're using the right version of Python. On the
-main branch, which simulates your current production release, we require Python 3.9. There is also a branch where we're working on
-a new feature that requires you to upgrade to Python 3.10, aplty named awesome-new-feature.
+With the ActiveState platform, you can set up all the dependencies needed to run and develop your project regardless of operating system, and reduce a complicated development environment setup down to single command.
 
-It does not matter whether you have Python installed or or if you have the wrong version of Python. The ActiveState platform
-will ensure you have the right right depdencies for the given git commit you're working on.
+In our hypothetical Python project, we've set up a simple unit test that ensures you're using the right version of Python. On the main branch, which simulates your current production release, we require Python 3.9. There is also a branch where we're working on a new feature that requires you to upgrade to Python 3.10, aptly named “awesome-new-feature”.
+
+It doesn't matter whether you have Python installed or if you have the wrong version of Python. The ActiveState platform will ensure you have the right dependencies for the given git commit you're working on.
 
 
-## Bootstraping your environment
+## **Bootstrapping your environment**
 
-To try this simply run the appropriate shell command based on your operating system. 
+To try this, simply run the appropriate shell command based on your operating system.
 
-It will: 
-* Install the *state tool*, our package manager for teams, if it not already present on the machine.
-* Checkout this git repository (Git not required!)
+Doing so will:
+
+
+
+* Install the State Tool, our package manager for teams, if it is not already present on the machine.
+* Checkout this git repository (git is not required!)
 * Configure git hooks
-* Install your needed depdencies
+* Install your needed dependencies
+
+### **Linux and Mac**
 
 
-###  Linux and Mac, run this command 
+### 
+Assuming you have curl installed on your machine this single command is all you need to get set up to code:
 
-Assuming you have curl installed on your machine this single command is all you need
-to get setup to code:
 
-```bash
+
+```
 sh <(curl -q https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.sh) -c'state activate --default ActiveState/onboarding'
 ```
 
 
+
 ![Setting up your environment with a single command](docs/imgs/onboarding-linux.gif)
 
-### Windows users, run this command
 
-```powershell
+### **Windows** 
 
-powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).DownloadString('https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.ps1'))) -c'state activate --default ActiveState/onboarding'"
 
 ```
 
-### If state tool is already istalled
 
-If you are the type that does not like to run random content through your shell process 
-OR you have already installed another project on your system then you can directly activate the virtual enviorment by typing the following command:
-
-```bash
-state activate ActiveState/onboarding
+### powershell -Command "& $([scriptblock]::Create((New-Object Net.WebClient).DownloadString('https://platform.activestate.com/dl/cli/655424048.1642518345_pdli01/install.ps1'))) -c'state activate --default ActiveState/onboarding'"
 ```
 
 
-**TODO: Insert instructions or links to installing the state tool directly**
+![Setting up your environment with a single command](docs/imgs/onboarding-windows.gif)
 
-## Running the unit tests 
+### **If the State Tool is already installed**
 
-Once installations is finished, you can run the unit tests.. we've set up a simple entrypoint in the activestate.yaml called  `testit` that invokes pytest for you.
+If you are the type that doesn’t like to run random content through your shell process OR you have already installed another project on your system, you can directly activate the virtual environment by typing the following command:
+
+
+```
+state activate ActiveState/environment-setup
+
+```
+ See instructions for installing State Tool [independent of project activation](https://docs.activestate.com/platform/state/install/#installing-on-windows).
+
+
+## Running the unit tests
+
+Once the installation has finished, you can run the unit tests. We've set up a simple entry point in the activestate.yaml called `testit` that invokes pytest for you.
+
 
 ![Running your unit tests](docs/imgs/testit-linux.gif)
 
 
 Note from the output, it's using Python 3.9.15.
 
-## See dynamic enviorment provisioning in work
 
-Now, let's try the other branch which requires Python 3.10. It couldn't be eaiser
-just checkout the github branch and run `testit` again.
+## **See dynamic environment provisioning at work**
+
+Now, let's try the other branch which requires Python 3.10. It couldn't be easier just checkout the GitHub branch and run `testit` again.
+
+
 
 ![Running your unit tests](docs/imgs/last-part-linux.gif)
 
-That's it! Thanks to the git hook and state tool, whenever you change branches or pull in new commits from a remote repo we ensure all your dedpdencies are up to date. And we mean, ALL YOUR DEPEDENCIES, which  includes compliers, interpteres, c-libraries and other devtools are up to date.
 
-
+That's it! Thanks to the git hook and State Tool, whenever you change branches or pull in new commits from a remote repo we ensure all your dependencies are up to date. And we mean, ALL YOUR DEPENDENCIES, which include: compilers, interpreters, c-libraries, and other devtools are up to date.
