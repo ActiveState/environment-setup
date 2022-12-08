@@ -5,11 +5,11 @@ Have you ever tried diving into someone else's software development project and 
 
 This simple project demonstrates how you can streamline setting up development environments for your team members.
 
-With the ActiveState platform, you can set up all the dependencies needed to run and develop your project regardless of operating system, and reduce a complicated development environment setup down to single command.
+With the ActiveState Platform, you can set up all the dependencies needed to run and develop your project regardless of operating system, and reduce a complicated development environment setup down to single command.
 
 In our hypothetical Python project, we've set up a simple unit test that ensures you're using the right version of Python. On the main branch, which simulates your current production release, we require Python 3.9. There is also a branch where we're working on a new feature that requires you to upgrade to Python 3.10, aptly named “awesome-new-feature”.
 
-It doesn't matter whether you have Python installed or if you have the wrong version of Python. The ActiveState platform will ensure you have the right dependencies for the given git commit you're working on.
+It doesn't matter whether you have Python installed or if you have the wrong version of Python. The ActiveState Platform will ensure you have the right dependencies for the given git commit you're working on.
 
 
 ## **Bootstrapping your environment**
