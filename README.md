@@ -9,7 +9,7 @@ With the ActiveState Platform, you can set up all the dependencies needed to run
 
 In our hypothetical Python project, we've set up a simple unit test that ensures you're using the right version of Python. On the main branch, which simulates your current production release, we require Python 3.9. There is also a branch where we're working on a new feature that requires you to upgrade to Python 3.10, aptly named “awesome-new-feature”.
 
-It doesn't matter whether you have Python installed or if you have the wrong version of Python. The ActiveState Platform will ensure you have the right dependencies for the given git commit you're working on.
+It doesn't matter whether you have Python installed or if you have the wrong version of Python. The ActiveState Platform will ensure you have the right dependencies for the given git commit you're working on. Best of all, thanks to our Secured Build Service, you can prepapre dedpedencies for your teams regardless of their operating system. 
 
 
 ## **Bootstrapping your environment**
