@@ -1,4 +1,3 @@
-project: https://platform.activestate.com/scottr/onboarding?branch=main&commitID=69bf4f49-a5a2-4760-98aa-89b0ac255690
 
 scripts:
   - name: testit
